@@ -6,6 +6,11 @@ from django.contrib.auth import get_user
 
 # Create your views here.
 def index(request):
+    """This renders an html page
+        and passes the necessary variables into the html
+        for the page to work correctly.
+    """
+
     latest_post_list = Post.objects.order_by('-pub_date')[:15]
     user_auth = request.user.is_authenticated
 
@@ -18,7 +23,9 @@ def index(request):
     return render(request, 'index.html', context)
 
 def blog(request):
+    """This renders the  blog.html page."""
     return render(request, 'blog.html')
 
 def songs(request):
+    """This renders the  songs.html page."""
     return render(request, 'songs.html')
