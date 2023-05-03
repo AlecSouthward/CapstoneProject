@@ -1,0 +1,82 @@
+ <title>Main Page</title>
+
+<html>
+<style>
+    .text {
+        overscroll-behavior: none;
+    }
+
+    .fcc-btn {
+        text-align: center;
+        background-color: royalblue;
+        color: white;
+        padding: 15px 25px;
+    }
+
+    .fcc-btn:hover {
+        background-color: rgb(55, 55, 225);
+        font-size: large;
+    }
+
+    .btn {
+        text-align: center;
+        display: block;
+        background-color: rgb(75, 75, 200);
+        color: white;
+        padding: 15px 25px;
+    }
+
+    .btn:hover {
+        background-color: rgb(45, 45, 235);
+        font-size: large;
+    }
+
+    .big_text {
+        font-size: larger;
+    }
+
+    ul {
+        background-color: rgb(240, 240, 255);
+    }
+</style>
+
+</html>
+
+<br/>
+  
+<a href="{% url 'blog' %}"><div class='fcc-btn'>Read the blog</div></a>
+<a href="{% url 'songs' %}"><div class='fcc-btn'>Check out his songs</div></a>
+
+<br/><br/>
+
+{% if not user_logged_in %}
+    <a href="{% url 'user_auth:login' %}"><div class="btn">Login</div></a>
+    <a href="{% url 'user_auth:create_user' %}"><div class="btn">Register</div></a>
+{% else %}
+    <div class="big_text"><b>Welcome {{ user_name }}!</b></div>
+{% endif %}
+
+
+<br/><br/>
+
+<h1 class="text-align: center display: inline">Posts</h1>
+
+{% if latest_post_list %}
+    <ul> <post-list>
+        {% for post in latest_post_list %}
+        <li>
+            <h3> {{post.title}} </h3>
+            
+            <h4> {{ post.pub_date }} </h4>
+            
+            <a> {{ post.content }} </a>
+        </li>
+        
+        <br/>
+        {% endfor %}
+    </post-list> </ul>
+{% else %}
+    <h4>There are no posts available.</h4>
+{% endif %}
+
+<br/>

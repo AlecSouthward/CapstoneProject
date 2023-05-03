@@ -1,0 +1,49 @@
+<h1>Ed Sheeran's Songs</h1>
+<h2>and where to find them.</h3>
+
+<br/><br/>
+
+<style>
+    h1 h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    body {
+        overscroll-behavior: none;
+
+        text-align:center;
+        font-family: sans-serif;
+        margin-right: 80px;
+        margin-left: 80px;
+     
+    }
+
+    .fcc-btn {
+        text-align: center;
+        background-color: royalblue;
+        color: white;
+        padding: 15px 25px;
+    }
+
+    .fcc-btn:hover {
+        background-color: rgb(55, 55, 225);
+        font-size: large;
+    }
+</style>
+
+<body>
+    <h3>Spotify</h3>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6eUKZXaKkcviH0Ku9w2n3V?utm_source=generator&theme=0" width="60%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <br/><br/>
+
+    <h3>Apple Music</h3>
+    <iframe id="embedPlayer" src="https://embed.music.apple.com/us/album/no-6-collaborations-project/1464549183?app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=dark" height="352" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 60%; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe>
+
+    <br/><br/>
+</body>
+
+<br/>
+
+<a href="{% url 'index' %}"><div class="fcc-btn">Return Home</div></a>
