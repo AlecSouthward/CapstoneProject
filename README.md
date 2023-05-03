@@ -6,10 +6,10 @@ This is a simple blog website with user login, built using Python and Django.
 - Django
 - Docker
 
-3# Local Installation ##
-1. Download the *'mySite'* folder.
+## Local Installation ##
+1. Download the ***'mySite'*** folder.
 
-2. Open Command Prompt and change the directory to the one where the *'mySite'* folder was downloaded.
+2. Open Command Prompt and change the directory to the one where the ***'mySite'*** folder was downloaded.
 
 3. Make sure you have Docker installed on your machine.
 
